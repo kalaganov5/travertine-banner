@@ -12,12 +12,16 @@
 /* Fonts */
 @import 'base/fonts';
 
+@import 'base/global.scss';
+
 /* Mixins, helpers and functions */
 @import 'base/mixins';
 
 /* Vendor */
 
 /* Components */
+@import 'components/tbanner';
 
 /* Browser specific styles */
 @import 'dirty/hacks';
+
