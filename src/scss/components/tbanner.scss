@@ -36,14 +36,14 @@ $color-light: #F5F4F0;
   min-width: 310px;
   z-index: 1000;
   @include transition();
-  
+
 
   &--hidden {
     opacity: 0;
     visibility: hidden;
     left: -100%;
   }
-  
+
   @include media-tablet {
     max-width: 700px;
   }
@@ -55,7 +55,7 @@ $color-light: #F5F4F0;
   border: none;
   position: absolute;
   left: 50%;
-  transform: translateX(50%);
+  transform: translateX(-50%);
   top: -1.5rem;
   cursor: pointer;
   border-radius: 50%;
@@ -68,6 +68,10 @@ $color-light: #F5F4F0;
   align-items: center;
   justify-content: center;
   @include transition(opacity);
+
+  right: 0;
+  left: unset;
+  transform: translateX(50%);
 
   &--hidden {
     opacity: 0;
@@ -83,16 +87,6 @@ $color-light: #F5F4F0;
   &:hover,
   &:focus {
     opacity: 1;
-  }
-
-  @include media-mobile-xl {
-    transform: translateX(-50%);
-  }
-
-  @include media-tablet {
-    right: 0;
-    left: unset;
-    transform: translateX(50%);
   }
 }
 
