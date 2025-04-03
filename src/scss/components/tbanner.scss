@@ -35,6 +35,14 @@ $color-light: #F5F4F0;
   font-family: Arial, Helvetica, sans-serif;
   min-width: 310px;
   z-index: 1000;
+  @include transition();
+  
+
+  &--hidden {
+    opacity: 0;
+    visibility: hidden;
+    left: -100%;
+  }
   
   @include media-tablet {
     max-width: 700px;
@@ -60,6 +68,10 @@ $color-light: #F5F4F0;
   align-items: center;
   justify-content: center;
   @include transition(opacity);
+
+  &--hidden {
+    opacity: 0;
+  }
 
   svg {
     width: 100%;
@@ -185,7 +197,6 @@ $color-light: #F5F4F0;
 
 .tbanner__info {
   margin-top: 10px;
-  margin-bottom: 15px;
   font-size: 12px;
 
   display: flex;
@@ -234,6 +245,7 @@ $color-light: #F5F4F0;
 .tbanner__link {
   background-color: #FFDE9E;
   padding: 5px 10px;
+  margin-top: 15px;
   display: inline-block;
   border-radius: 10px;
   text-decoration: none;
