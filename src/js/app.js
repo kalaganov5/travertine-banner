@@ -36,8 +36,7 @@ class BannerControl {
     this.shadow = this.container.attachShadow({ mode: 'open' });
 
     const style = `
-      <style>
-      /*!******************************************************************************************************************************************************!*\
+      <style>/*!******************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/scss/app.scss ***!
   \******************************************************************************************************************************************************/
 /* By Athlon Front-End Team */
@@ -106,7 +105,7 @@ class BannerControl {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  bottom: 24px;
+  bottom: 105px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
           box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 10px;
@@ -124,6 +123,11 @@ class BannerControl {
 @media (min-width: 768px) {
   .tbanner {
     max-width: 700px;
+  }
+}
+@media (min-width: 1024px) {
+  .tbanner {
+    bottom: 24px;
   }
 }
 
@@ -379,8 +383,7 @@ class BannerControl {
 /**
  * Dirty hacks, yes internet explorer, we are looking at you
 */
-
-      </style>
+</style>
     `;
 
     const html = `
