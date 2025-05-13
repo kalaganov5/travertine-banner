@@ -11,7 +11,7 @@ class BannerControl {
   #fadeOutDuration = 500;
 
   constructor() {
-    
+
 
     if (!config) {
       console.warn('BANNER_CONFIG не найден');
@@ -555,6 +555,11 @@ class BannerControl {
 
   #initEvents() {
     this.closeButton.addEventListener('click', this.#handleClose);
+
+    if (typeof config.onClick === 'function') {
+      this.link.addEventListener('click', config.onClick);
+    }
+    
     this.link.addEventListener('click', this.#handleClose);
   }
 
